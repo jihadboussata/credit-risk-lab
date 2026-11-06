@@ -1,0 +1,38 @@
+{
+  "verified_utc": "2026-11-06T13:56:08.904363+00:00",
+  "study_mode": "full",
+  "source_rows": 30000,
+  "test_count": 32,
+  "test_failures": 0,
+  "test_errors": 0,
+  "test_skipped": 0,
+  "test_duration_seconds": 9.865,
+  "dependency_check": "python -m pip check passed; no broken requirements",
+  "notebooks": {
+    "01_data_and_sql.ipynb": {
+      "executed_code_cells": 6,
+      "embedded_png_outputs": 1
+    },
+    "02_exploration_and_hypotheses.ipynb": {
+      "executed_code_cells": 7,
+      "embedded_png_outputs": 4
+    },
+    "03_models_and_decisions.ipynb": {
+      "executed_code_cells": 9,
+      "embedded_png_outputs": 7
+    }
+  },
+  "browser": {
+    "http_status": 200,
+    "threshold_before": "0.15",
+    "threshold_after": "0.40",
+    "synthetic_score": "4.6%",
+    "mobile_horizontal_overflow": false,
+    "browser_page_errors": []
+  },
+  "notes": [
+    "Tests executed locally; GitHub-hosted CI has not yet been run.",
+    "Third-party matplotlib/pyparsing deprecation notices do not affect test results.",
+    "The supplied trained artifact is excluded by .gitignore and included in the ZIP for local demonstration."
+  ]
+}

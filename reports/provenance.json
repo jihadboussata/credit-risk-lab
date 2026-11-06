@@ -1,0 +1,9 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+  "download_url": "https://archive.ics.uci.edu/static/public/350/default+of+credit+card+clients.zip",
+  "local_archive": "data\\raw\\uci_credit_card.zip",
+  "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+  "bytes": 5539494,
+  "audit_time_utc": "2026-11-06T13:25:02.430328+00:00",
+  "license": "CC BY 4.0 (source dataset); see DATA_LICENSE.md for attribution"
+}

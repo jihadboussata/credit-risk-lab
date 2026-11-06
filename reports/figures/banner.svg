@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="440" viewBox="0 0 1400 440" role="img" aria-label="Credit Risk Lab. From payment history to defensible decisions.">
+<defs><pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern><linearGradient id="b" x2="1" y2="1"><stop stop-color="#0c1e32"/><stop offset="1" stop-color="#132f42"/></linearGradient></defs>
+<rect width="1400" height="440" rx="18" fill="url(#b)"/><rect width="1400" height="440" fill="url(#g)"/>
+<rect x="70" y="65" width="7" height="25" fill="#38c8b1"/><text x="94" y="85" font-family="Arial,sans-serif" font-size="16" letter-spacing="4" fill="#82d9cb">AN APPLIED DATA SCIENCE STUDY</text>
+<text x="70" y="175" font-family="Arial,sans-serif" font-weight="700" font-size="72" fill="#f7f4eb">Credit Risk Lab</text>
+<text x="73" y="226" font-family="Arial,sans-serif" font-size="27" fill="#c3d2db">From payment history to defensible decisions.</text>
+<text x="73" y="305" font-family="Arial,sans-serif" font-size="17" letter-spacing="1" fill="#82d9cb">SQL   /   CLASSICAL MACHINE LEARNING   /   DECISION ANALYSIS</text>
+<text x="73" y="375" font-family="Arial,sans-serif" font-size="16" fill="#8ea6b8">30,000 accounts  ·  10-stage methodology  ·  Reproducible evaluation</text>
+<g transform="translate(1030 85)"><rect x="0" y="132" width="42" height="128" rx="4" fill="#24485b"/><rect x="63" y="96" width="42" height="164" rx="4" fill="#2f6677"/><rect x="126" y="56" width="42" height="204" rx="4" fill="#38858b"/><rect x="189" width="42" height="260" rx="4" fill="#38c8b1"/><path d="M 8 110 L 80 71 L 145 36 L 210 -12" fill="none" stroke="#f7c77a" stroke-width="4"/><circle cx="210" cy="-12" r="6" fill="#f7c77a"/></g>
+</svg>

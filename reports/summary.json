@@ -1,0 +1,202 @@
+{
+  "project": "Credit Risk Lab",
+  "version": "1.0.0",
+  "seed": 42,
+  "run_mode": "full",
+  "winner": "xgboost",
+  "threshold": 0.15000000000000002,
+  "costs": {
+    "false_negative": 5.0,
+    "false_positive": 1.0,
+    "unit": "illustrative error-cost units, not NTD or measured savings"
+  },
+  "split_counts": {
+    "train": 18000,
+    "validation": 6000,
+    "test": 6000
+  },
+  "split_prevalence": {
+    "train": 0.2212222222222222,
+    "validation": 0.22116666666666668,
+    "test": 0.22116666666666668
+  },
+  "dataset": {
+    "rows": 30000,
+    "columns_including_id_and_target": 25,
+    "unique_ids": 30000,
+    "missing_cells": 0,
+    "duplicate_ids": 0,
+    "duplicate_predictor_rows": 56,
+    "positive_class_count": 6636,
+    "prevalence": 0.2212,
+    "negative_bill_cells": 3932,
+    "nonstandard_education_count": 345,
+    "education_codes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "marriage_codes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "repayment_status_codes": [
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "excluded_primary_features": [
+      "id",
+      "sex",
+      "age",
+      "target"
+    ],
+    "cohort": "Taiwan credit-card accounts, April\u2013September 2005 predictors; next-month default target",
+    "audit_notes": [
+      "Negative bills and repayment codes retained as source values.",
+      "Undocumented education categories consolidated into category 0 in the feature transformer.",
+      "Distinct customer IDs retained; identical feature rows alone do not establish duplicate people.",
+      "No timestamps permitting out-of-time validation; random holdout measures same-cohort generalization only."
+    ],
+    "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+    "source": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients"
+  },
+  "model_selection": {
+    "metric": "validation average precision before optional champion calibration",
+    "validation_average_precision": {
+      "logistic_l1": 0.5230430204919722,
+      "logistic_l2": 0.5227959441142118,
+      "decision_tree": 0.5025706954762259,
+      "random_forest": 0.5421812772709973,
+      "xgboost": 0.545892295780281,
+      "svm_rbf": 0.5021664014717682
+    },
+    "best_parameters": {
+      "logistic_l1": {
+        "model__C": 0.3,
+        "model__class_weight": null
+      },
+      "logistic_l2": {
+        "model__C": 0.1,
+        "model__class_weight": null
+      },
+      "decision_tree": {
+        "model__max_depth": 8,
+        "model__min_samples_leaf": 100
+      },
+      "random_forest": {
+        "model__max_depth": 8,
+        "model__min_samples_leaf": 5
+      },
+      "xgboost": {
+        "model__learning_rate": 0.04,
+        "model__max_depth": 3
+      },
+      "svm_rbf": {
+        "model__C": 0.5,
+        "model__gamma": 0.02
+      }
+    },
+    "cv": "3-fold stratified training-only; shuffle=True; seed=42",
+    "winner_selected_before_test": true,
+    "test_comparison_is_descriptive": true
+  },
+  "calibration": {
+    "method": "none",
+    "raw_validation_brier": 0.13699298281676242,
+    "sigmoid_validation_brier": 0.13816145581024386,
+    "selection": "Sigmoid kept only if validation Brier improves; calibrator fitted on training folds only."
+  },
+  "test_metrics": {
+    "average_precision": 0.5811523747975378,
+    "roc_auc": 0.7927607989007059,
+    "brier": 0.1311262221931491,
+    "precision": 0.3614167812929849,
+    "recall": 0.7920120572720422,
+    "f1": 0.49634002361275087,
+    "threshold": 0.15000000000000002,
+    "tn": 2816,
+    "fp": 1857,
+    "fn": 276,
+    "tp": 1051,
+    "review_rate": 0.4846666666666667,
+    "fpr": 0.3973892574363364,
+    "cost_units": 3237.0,
+    "cost_units_per_1000": 539.5
+  },
+  "bootstrap95": {
+    "average_precision": {
+      "low": 0.5510696620012159,
+      "high": 0.6073039261385187
+    },
+    "roc_auc": {
+      "low": 0.7780179942185257,
+      "high": 0.8074965942725147
+    },
+    "brier": {
+      "low": 0.1255251994616012,
+      "high": 0.13654451752596183
+    },
+    "recall": {
+      "low": 0.7701560794213973,
+      "high": 0.8122903804742156
+    },
+    "precision": {
+      "low": 0.34509571001778633,
+      "high": 0.37948219411263984
+    },
+    "f1": {
+      "low": 0.4792833107133855,
+      "high": 0.5144341263853413
+    }
+  },
+  "bootstrap_replicates": 500,
+  "review_budget": {
+    "review_fraction": 0.1,
+    "reviewed": 600,
+    "precision_at_budget": 0.7233333333333334,
+    "recall_at_budget": 0.32705350414468726
+  },
+  "excluded_primary_features": [
+    "id",
+    "sex",
+    "age",
+    "target"
+  ],
+  "subgroup_audit_note": "Sex/age excluded from primary features, retained for audit; proxies remain. Small subgroup estimates unstable; this is not a fairness certification.",
+  "feature_importance_note": "Raw-column permutation on validation subset (2,000 customers); correlated features and associations are not causal explanations.",
+  "ablation_note": "Exploratory training-CV comparison with fixed hyperparameters, not an independent confirmatory test.",
+  "timing_seconds": {
+    "logistic_l1": 38.564,
+    "logistic_l2": 15.905,
+    "decision_tree": 9.283,
+    "random_forest": 50.836,
+    "xgboost": 21.573,
+    "svm_rbf": 1046.728
+  },
+  "total_seconds": 1342.243,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.0.2",
+    "matplotlib": "3.10.3",
+    "joblib": "1.5.1"
+  }
+}

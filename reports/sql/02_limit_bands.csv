@@ -1,0 +1,5 @@
+limit_band,customers,defaults,default_rate
+01_under_50k,2591,956,0.369
+02_50k_to_150k,6540,1639,0.2506
+03_150k_to_300k,5839,977,0.1673
+04_300k_plus,3030,410,0.1353

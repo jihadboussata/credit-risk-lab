@@ -1,0 +1,53 @@
+{
+  "rows": 30000,
+  "columns_including_id_and_target": 25,
+  "unique_ids": 30000,
+  "missing_cells": 0,
+  "duplicate_ids": 0,
+  "duplicate_predictor_rows": 56,
+  "positive_class_count": 6636,
+  "prevalence": 0.2212,
+  "negative_bill_cells": 3932,
+  "nonstandard_education_count": 345,
+  "education_codes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "marriage_codes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "repayment_status_codes": [
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excluded_primary_features": [
+    "id",
+    "sex",
+    "age",
+    "target"
+  ],
+  "cohort": "Taiwan credit-card accounts, April\u2013September 2005 predictors; next-month default target",
+  "audit_notes": [
+    "Negative bills and repayment codes retained as source values.",
+    "Undocumented education categories consolidated into category 0 in the feature transformer.",
+    "Distinct customer IDs retained; identical feature rows alone do not establish duplicate people.",
+    "No timestamps permitting out-of-time validation; random holdout measures same-cohort generalization only."
+  ]
+}

@@ -1,0 +1,3 @@
+features,mean_cv_average_precision,std_cv_average_precision,note
+original_only,0.5562213100471461,0.008166866835156827,Training-only fixed-parameter exploratory comparison; winner hyperparameters selected with engineered features.
+original_plus_engineered,0.5631806917464485,0.008866357876732794,Training-only fixed-parameter exploratory comparison; winner hyperparameters selected with engineered features.
